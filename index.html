@@ -25,20 +25,24 @@ html, body, #wrapper {
 img[usemap], map area{
     outline: none;
 }
+div#display_container {
+    margin: 40px 0px 0px 80px;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    position: absolute;
+}
 div#description {
-	margin: 40px 0px 0px 80px;
-	left: 0;
-	top: 0;
-	z-index: 10;
-	position: absolute;
-	font-size: 30px;
-	height: 50px;
+    font-size: 30px;
+}
+div#level {
+    font-size: 16px;
 }
 #return_menu {
-	z-index: 10;
-	position: absolute;
-	left: 0;
-	top: 0;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 div#main_wrapper {
@@ -65,7 +69,11 @@ div#main_wrapper {
 
 <div id="main_wrapper">
     <a href="#" id="return_menu">Return</a>
-    <div id="description"></div>
+    <div id="display_container">
+        <div id="level"></div>
+        <div id="description"></div>
+        <div id="log"></div>
+    </div>
     <table id="wrapper">
       <tr>
         <td><img src="images/sri_yantra_white.png" alt="" id="main" usemap="#image-map"/></td>
@@ -85,8 +93,8 @@ div#main_wrapper {
     <area href="sri_yantra_circle_past.png" coords="851,499,843,565,827,632,795,688,753,744,693,795,629,824,567,843,502,851,431,844,367,826,303,791,248,745,206,691,175,631,156,567,148,509,131,505,141,569,159,637,193,698,239,754,296,802,364,840,426,858,502,867,570,859,635,841,700,806,765,755,809,699,840,640,860,573,867,500" shape="poly">
     <area href="sri_yantra_circle_past.png" coords="150,504,152,438,172,372,203,307,254,249,307,202,368,174,438,152,499,148,570,155,636,174,699,208,750,251,794,303,826,369,845,438,853,496,866,495,860,436,843,364,806,296,762,241,708,191,641,158,574,137,499,128,434,131,362,154,299,180,243,227,189,292,155,361,137,430,129,497" shape="poly">
     <area href="sri_yantra_circle_present.png" coords="163,502,168,432,190,365,228,305,263,261,320,218,372,190,440,169,500,163,568,170,626,186,688,217,739,258,779,307,812,369,833,432,838,497,854,498,844,428,826,364,792,300,749,247,695,206,629,172,571,154,500,147,435,154,367,173,311,204,252,249,213,297,177,362,156,428,147,501" shape="poly">
-	<area href="sri_yantra_circle_present.png" coords="161,502,170,566,188,628,219,686,264,739,320,783,372,812,437,832,502,837,564,829,627,810,690,778,739,736,783,685,814,627,832,563,837,501,851,501,848,561,828,631,798,690,752,747,700,787,631,823,568,845,500,852,432,844,365,825,307,793,252,753,206,693,173,632,156,565,147,502" shape="poly">
-	<area href="sri_yantra_circle_future.png" coords="178,499,184,435,199,374,234,316,272,269,323,227,378,199,441,181,502,176,567,184,623,201,681,232,729,274,767,321,796,378,815,438,821,497,839,499,833,438,815,372,783,311,739,261,691,222,630,187,569,166,505,157,439,163,376,183,319,211,262,257,224,306,188,368,169,426,162,496" shape="poly">
+    <area href="sri_yantra_circle_present.png" coords="161,502,170,566,188,628,219,686,264,739,320,783,372,812,437,832,502,837,564,829,627,810,690,778,739,736,783,685,814,627,832,563,837,501,851,501,848,561,828,631,798,690,752,747,700,787,631,823,568,845,500,852,432,844,365,825,307,793,252,753,206,693,173,632,156,565,147,502" shape="poly">
+    <area href="sri_yantra_circle_future.png" coords="178,499,184,435,199,374,234,316,272,269,323,227,378,199,441,181,502,176,567,184,623,201,681,232,729,274,767,321,796,378,815,438,821,497,839,499,833,438,815,372,783,311,739,261,691,222,630,187,569,166,505,157,439,163,376,183,319,211,262,257,224,306,188,368,169,426,162,496" shape="poly">
     <area href="sri_yantra_circle_future.png" coords="177,498,183,563,202,622,231,681,271,727,325,770,377,798,442,819,500,820,564,817,625,798,684,770,726,728,766,680,797,621,815,562,820,500,839,498,833,565,814,624,781,685,740,735,692,776,632,809,566,829,503,837,440,831,372,812,315,782,261,737,220,689,184,628,168,567,159,496" shape="poly">
     <area href="sri_yantra_po_body.png" coords="274,652,350,724,325,744,274,727,254,676" shape="poly">
     <area href="sri_yantra_po_courage.png" coords="377,200,426,202,447,232,350,274,342,242" shape="poly">
@@ -156,7 +164,7 @@ div#main_wrapper {
     <area href="sri_yantra_c4_sustaining.png" coords="485,526,517,525,501,548" shape="poly">
     <area href="sri_yantra_center_arrows_bowl_noose_stick.png" coords="476,490,500,523,524,489,532,506,518,523,484,526,470,507" shape="poly">
     <area href="sri_yantra_center_arrows_bowl_noose_stick.png" coords="487,474,512,474,521,487,481,485" shape="poly">
-	<area href="sri_yantra_center_giver_of_all_perfection.png" coords="504,499,479,487,523,487,502,520" shape="poly">
+    <area href="sri_yantra_center_giver_of_all_perfection.png" coords="504,499,479,487,523,487,502,520" shape="poly">
     <area href="sri_yantra_center_giver_of_all_perfection.png" coords="479,489,500,522,499,507,496,498" shape="poly">
     <area href="sri_yantra_center_bindu.png" coords="500,501,7" shape="circle">
 </map>
@@ -166,25 +174,57 @@ div#main_wrapper {
   crossorigin="anonymous"></script>
   <!-- <script src="js/scripts.js"></script> -->
 
-	<script>
+    <script>
+        var config = {
+            'meditating':0,
+            'learning':0,
+            'level':0,
+            'database':[],
+            'entries': []
+        };
+
         $( document ).ready(function() {
             $("#my-map area").mouseover(function(){
-            	filename = getFileName(this.href);
-            	changeImage(filename);
-            	updateDescription(getDescription(filename));
+                filename = getFileName(this.href);
+                changeImage(filename);
+                updateDescription(filename);
             }); 
             $("#my-map area").mouseout(function(){
-            	changeImage('sri_yantra_white.png');
-            	updateDescription('');
+                resetImage();
+                var filename = '';
+                if (config.learning == 1 && config.entries.length) {
+                    filename = config.entries[0].filename;
+                }
+                updateDescription(filename);
             }); 
             $("#my-map area").click(function(){
-            		return false;
+                if (config.learning == 1) {
+                    filename = getFileName(this.href);
+                    if (config.entries.length && config.entries[0].filename == filename) {
+                        updateLog(getDescription(filename));
+                        config.entries.shift();
+                        if (config.entries.length == 0) {
+                            config.level++;
+                            updateLevel();
+                            resetImage();
+                            if (config.level == 10) {
+                                resetEverything();
+                                alert("Congratulations!");
+                                return false;
+                            }
+                            getRandomEntries();
+                        }
+                        updateDescription(config.entries[0].filename);
+                    }
+                }
+
+                return false;
             }); 
             $("#begin_meditation").click(function(){
                 hideMenu();
                 showSriYantra("center");
-        		beginMeditation();
-        		return false;
+                beginMeditation();
+                return false;
             });
             $("#explore_sri_yantra").click(function(){
                 config.learning = 0;
@@ -196,22 +236,26 @@ div#main_wrapper {
                 config.learning = 1;
                 hideMenu();
                 showSriYantra("right");
+                getRandomEntries();
+                updateDescription(config.entries[0].filename);
+                updateLevel();
                 return false;
             });
             $("#return_menu").click(function(){
-                showMenu();
-                hideSriYantra();
+                resetEverything();
                 return false;
             });
             updateDatabase();
         });
 
-        var config = {
-            'meditating':0,
-            'learning':0,
-            'level':0,
-            'database':[]
-        };
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
 
         function updateDatabase() {
             for (var i = $("#my-map area").length - 1; i >= 0; i--) {
@@ -220,13 +264,60 @@ div#main_wrapper {
                 if (!(level in config.database)) {
                     config.database[level] = [];
                 }
-                config.database[level][config.database[level].length] = {"filename":filename, "description":getDescription(filename)};
+                var entry = {"filename":filename, "description":getDescription(filename)};
+                // skip duplicates
+                var already_exists = false;
+                for (var j = 0; j < config.database[level].length; j++) {
+                    if (config.database[level][j].filename == filename) {
+                        already_exists = true;
+                    }
+                }
+                if (!already_exists) {
+                    config.database[level][config.database[level].length] = entry;
+                }
             }
+        }
+
+        function getRandomEntries() {
+            if (config.level == 0) {
+                config.level++;
+            }
+            var entries = [...config.database[config.level]];
+            shuffleArray(entries);
+            config.entries = [...entries];
+        }
+
+        function updateLevel() {
+            var level_text = "Level: " + config.level;
+            updateLog("Next " + level_text);
+            $("#level").html(level_text);
+        }
+        function updateLog(text) {
+            var log = $("#log").html();
+            console.log(log);
+            console.log((log != ""));
+            if (log != "") {
+                log+="\n<br />";
+            }
+            $("#log").html(log + text);
         }
 
         function hideMenu() {
             $("#menu").hide();   
         }
+
+        function resetEverything() {
+            config.meditating = 0;
+            config.learning = 0;
+            config.level = 0;
+            config.entries = [];
+            $("#log").html('');
+            $("#level").html('');
+            $("#description").html('');
+            hideSriYantra();
+            showMenu();
+        }
+
         function showMenu() {
             $("#menu").show();   
         }
@@ -243,6 +334,10 @@ div#main_wrapper {
             return filename;
         }
 
+        function resetImage() {
+            $("#main").attr("src","images/sri_yantra_white.png");
+        }
+
         function changeImage(filename) {
             show_image = true;
             if (config.meditating == 1) {
@@ -255,11 +350,11 @@ div#main_wrapper {
                 }
             }
             if (show_image) {
-            	$("#main").attr("src","images/"+filename);
+                $("#main").attr("src","images/"+filename);
             }
         }
 
-        function updateDescription(text) {
+        function updateDescription(filename) {
             update_description = true;
             if (config.meditating == 1) {
                 update_description = false;
@@ -271,26 +366,30 @@ div#main_wrapper {
                 }
             }
             if (update_description) {
-            	$("div#description").html(text);
+                var description = '';
+                if (filename != ''){
+                    description = getDescription(filename);
+                }
+                $("div#description").html(description);
             }
         }
 
         function beginMeditation() {
             config.meditating = 1;
             setTimeout(
-            	function() {
-            		config.meditating = 0;
-            		changeImage('white_background.png');
-            		config.meditating = 1;
-            		setTimeout(
-            			function() {
-            				config.meditating = 0;
-            				changeImage('sri_yantra_white.png');
-            			},
-            			1000*60*2 // 2 minutes
-            		);
-            	},
-            	1000*60*5 // 5 minutes
+                function() {
+                    config.meditating = 0;
+                    changeImage('white_background.png');
+                    config.meditating = 1;
+                    setTimeout(
+                        function() {
+                            config.meditating = 0;
+                            resetImage();
+                        },
+                        1000*60*2 // 2 minutes
+                    );
+                },
+                1000*60*5 // 5 minutes
             );
         }
 
@@ -348,7 +447,7 @@ div#main_wrapper {
             return description;
         }
 
-	</script>
+    </script>
 
 </body>
 </html>
