@@ -1,0 +1,44 @@
+html, body, #wrapper {
+   height:100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+#wrapper td {
+   vertical-align: middle;
+   text-align: center;
+}
+img[usemap], map area{
+    outline: none;
+}
+div#display_container {
+    margin: 50px 0px 0px 50px;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    position: absolute;
+}
+div#description {
+    font-size: 25px;
+}
+div#level {
+    font-size: 16px;
+}
+#return_menu {
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+div#main_wrapper {
+    display: none;
+}
+
+div#message_wrapper {
+    display: none;
+    margin: auto;
+    width: 700px;
+    padding-top: 200px;
+}

@@ -2,73 +2,69 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Sri Yantra Meditation</title>
-  <meta name="description" content="Sri Yantra Meditation">
-  <meta name="author" content="Luke Stokes">
-
-<!--  <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
-
-<style>
-html, body, #wrapper {
-   height:100%;
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   border: 0;
-}
-#wrapper td {
-   vertical-align: middle;
-   text-align: center;
-}
-img[usemap], map area{
-    outline: none;
-}
-div#display_container {
-    margin: 40px 0px 0px 80px;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    position: absolute;
-}
-div#description {
-    font-size: 30px;
-}
-div#level {
-    font-size: 16px;
-}
-#return_menu {
-    z-index: 10;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-div#main_wrapper {
-    display: none;
-}
-
-</style>
-
-<link rel="icon" href="favicon.ico" type="image/x-icon" />
-
+    <title>Sri Yantra Meditation</title>
+    <meta name="description" content="Sri Yantra Meditation">
+    <meta name="author" content="Luke Stokes">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-<div id="menu">
-    <p>Welcome to the Sri Yantra educational and meditation tool. Use this tool to learn about the different aspects of the Sri Yantra and as a mechanism for focusing on it. The Sri Yantra represents the union of Masculine and Feminine Divine while including all aspects of human experience.</p>
-
-    <p>
-        <ul>
-            <li><a href="#" id="explore_sri_yantra">Explore the Sri Yantra</a></li>
-            <li><a href="#" id="learn_sri_yantra">Learn the Sri Yantra</a></li>
-            <li><a href="#" id="begin_meditation">Begin Meditation</a></li>
+<div id="menu" class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="explore_sri_yantra">Explore the Sri Yantra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="learn_sri_yantra">Learn the Sri Yantra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="begin_meditation">Begin Meditation</a>
+          </li>
         </ul>
+      </div>
+    </nav>
+    <div class="row mt-5 justify-content-center">
+        <div class="col-md-8">
+            <p>Welcome to the Sri Yantra educational and meditation tool.</p>
+            <p>Use this tool to learn about the different attributes of the Sri Yantra and as a mechanism for focusing on it. The Sri Yantra represents the union of Masculine and Feminine Divine while including all aspects of human experience.</p>
+            <p>To go into greater detail about the Sri Yantra, see <a href="https://www.youtube.com/watch?v=gTcWL00NUrs">this video</a> or visit some of the pages used to gather information for this tool <a href="https://www.gaia.com/article/what-is-the-power-of-shri-yantra">here</a>, <a href="http://mythologian.net/sri-yantra-sri-chakra-symbol-shree-yantra-meaning/">here</a>, <a href="http://karatmaster.com/levels-sri-yantra/">here</a>, <a href="https://creationcenter.org/unlocking-the-sri-yantra-through-the-secrets-of-sacred-geometry/">here</a>, and <a href="https://www.phidle.com/blogs/sacred-geometry/discover-the-power-and-beauty-of-the-sri-yantra">here</a>.</p>
+            <p>For best results, enter full screen mode from the view menu and adjust your zoom as needed so the Sri Yantra fits well on your screen.</p>
+            <p>Use the menu items above to get started.</p>
+            <p>First, explore the Sri Yantra to learn about the various attributes.</p>
+            <p>Next, starting from the outside and working inwards, learn the Sri Yantra by clicking on the correct attribute.</p>
+            <p>Finally, click begin meditation for a five minute meditation which you can do as often as you like.</p>
+        </div>
+    </div>
+</div>
+
+<div id="message_wrapper" class="container">
+    <p>Your meditation is about to begin.</p>
+    <p>We recommend entering full screen mode from the view menu and adjusting the zoom as needed.</p>
+    <p>
+    Traditionally, you'll want to face east with the screen about one or two feet away.<br />
+    Be sure you are seated comfortably on a chair or pillow.<br />
+    Breathe in through the nose filling your belly first and out through the mouth.<br />
+    Focus on the center of the Sri Yantra.<br />
+    Slowly, relax your gaze to look a the triangles.<br />
+    Stare quietly, focusing on the silence between breaths.<br />
+    Notice any emotions or thoughts that appear. Don't pass judgment, simply observe and refocus.<br />
+    After five minutes, the image will disappear. Stare at the ghost image until it also dissappeasrs.<br />
+    <br />
+    <a href="#" onclick="startMeditation(1); return false;">Start 1 Minute Meditation</a>.<br />
+    <a href="#" onclick="startMeditation(3); return false;">Start 3 Minute Meditation</a>.<br />
+    <a href="#" onclick="startMeditation(5); return false;">Start 5 Minute Meditation</a>.<br />
+    <a href="#" onclick="startMeditation(10); return false;">Start 10 Minute Meditation</a>.<br />
+    <a href="#" onclick="startMeditation(20); return false;">Start 20 Minute Meditation</a>.<br />
     </p>
 </div>
 
 <div id="main_wrapper">
-    <a href="#" id="return_menu">Return</a>
+    <a href="#" id="return_menu" class="nav-link">Return</a>
     <div id="display_container">
         <div id="level"></div>
         <div id="description"></div>
@@ -172,282 +168,7 @@ div#main_wrapper {
   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
   crossorigin="anonymous"></script>
-  <!-- <script src="js/scripts.js"></script> -->
-
-    <script>
-        var config = {
-            'meditating':0,
-            'learning':0,
-            'level':0,
-            'database':[],
-            'entries': []
-        };
-
-        $( document ).ready(function() {
-            $("#my-map area").mouseover(function(){
-                filename = getFileName(this.href);
-                changeImage(filename);
-                updateDescription(filename);
-            }); 
-            $("#my-map area").mouseout(function(){
-                resetImage();
-                var filename = '';
-                if (config.learning == 1 && config.entries.length) {
-                    filename = config.entries[0].filename;
-                }
-                updateDescription(filename);
-            }); 
-            $("#my-map area").click(function(){
-                if (config.learning == 1) {
-                    filename = getFileName(this.href);
-                    if (config.entries.length && config.entries[0].filename == filename) {
-                        updateLog(getDescription(filename));
-                        config.entries.shift();
-                        if (config.entries.length == 0) {
-                            config.level++;
-                            updateLevel();
-                            resetImage();
-                            if (config.level == 10) {
-                                resetEverything();
-                                alert("Congratulations!");
-                                return false;
-                            }
-                            getRandomEntries();
-                        }
-                        updateDescription(config.entries[0].filename);
-                    }
-                }
-
-                return false;
-            }); 
-            $("#begin_meditation").click(function(){
-                hideMenu();
-                showSriYantra("center");
-                beginMeditation();
-                return false;
-            });
-            $("#explore_sri_yantra").click(function(){
-                config.learning = 0;
-                hideMenu();
-                showSriYantra("right");
-                return false;
-            });
-            $("#learn_sri_yantra").click(function(){
-                config.learning = 1;
-                hideMenu();
-                showSriYantra("right");
-                getRandomEntries();
-                updateDescription(config.entries[0].filename);
-                updateLevel();
-                return false;
-            });
-            $("#return_menu").click(function(){
-                resetEverything();
-                return false;
-            });
-            updateDatabase();
-        });
-
-        function shuffleArray(array) {
-            for (var i = array.length - 1; i > 0; i--) {
-                var j = Math.floor(Math.random() * (i + 1));
-                var temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-            }
-        }
-
-        function updateDatabase() {
-            for (var i = $("#my-map area").length - 1; i >= 0; i--) {
-                filename = getFileName($("#my-map area")[i].href);
-                level = getLevel(filename);
-                if (!(level in config.database)) {
-                    config.database[level] = [];
-                }
-                var entry = {"filename":filename, "description":getDescription(filename)};
-                // skip duplicates
-                var already_exists = false;
-                for (var j = 0; j < config.database[level].length; j++) {
-                    if (config.database[level][j].filename == filename) {
-                        already_exists = true;
-                    }
-                }
-                if (!already_exists) {
-                    config.database[level][config.database[level].length] = entry;
-                }
-            }
-        }
-
-        function getRandomEntries() {
-            if (config.level == 0) {
-                config.level++;
-            }
-            var entries = [...config.database[config.level]];
-            shuffleArray(entries);
-            config.entries = [...entries];
-        }
-
-        function updateLevel() {
-            var level_text = "Level: " + config.level;
-            updateLog("Next " + level_text);
-            $("#level").html(level_text);
-        }
-        function updateLog(text) {
-            var log = $("#log").html();
-            console.log(log);
-            console.log((log != ""));
-            if (log != "") {
-                log+="\n<br />";
-            }
-            $("#log").html(log + text);
-        }
-
-        function hideMenu() {
-            $("#menu").hide();   
-        }
-
-        function resetEverything() {
-            config.meditating = 0;
-            config.learning = 0;
-            config.level = 0;
-            config.entries = [];
-            $("#log").html('');
-            $("#level").html('');
-            $("#description").html('');
-            hideSriYantra();
-            showMenu();
-        }
-
-        function showMenu() {
-            $("#menu").show();   
-        }
-        function hideSriYantra() {
-            $("#main_wrapper").hide();
-        }
-        function showSriYantra(alignment) {
-            $("#wrapper tr td").css("text-align",alignment);
-            $("#main_wrapper").show();
-        }
-
-        function getFileName(href) {
-            filename = href.substring(href.lastIndexOf('/')+1);
-            return filename;
-        }
-
-        function resetImage() {
-            $("#main").attr("src","images/sri_yantra_white.png");
-        }
-
-        function changeImage(filename) {
-            show_image = true;
-            if (config.meditating == 1) {
-                show_image = false;
-            }
-            if (config.learning == 1) {
-                show_image = false;
-                if (getLevel(filename) == config.level) {
-                    show_image = true;
-                }
-            }
-            if (show_image) {
-                $("#main").attr("src","images/"+filename);
-            }
-        }
-
-        function updateDescription(filename) {
-            update_description = true;
-            if (config.meditating == 1) {
-                update_description = false;
-            }
-            if (config.learning == 1) {
-                update_description = false;
-                if (getLevel(filename) == config.level) {
-                    update_description = true;
-                }
-            }
-            if (update_description) {
-                var description = '';
-                if (filename != ''){
-                    description = getDescription(filename);
-                }
-                $("div#description").html(description);
-            }
-        }
-
-        function beginMeditation() {
-            config.meditating = 1;
-            setTimeout(
-                function() {
-                    config.meditating = 0;
-                    changeImage('white_background.png');
-                    config.meditating = 1;
-                    setTimeout(
-                        function() {
-                            config.meditating = 0;
-                            resetImage();
-                        },
-                        1000*60*2 // 2 minutes
-                    );
-                },
-                1000*60*5 // 5 minutes
-            );
-        }
-
-        function toTitleCase(str) {
-            return str.replace(/(?:^|\s)\w/g, function(match) {
-                return match.toUpperCase();
-            });
-        }
-
-        function getLevel(filename) {
-            level = 0;
-            var section = filename.substring('sri_yantra_'.length);
-            section = section.substring(0,section.indexOf("_"));
-            if (section >= 0 && level <= 8) {
-                level = 1;
-            }
-            if (section == "circle") {
-                level = 2;
-            }
-            if (section == "po") {
-                level = 3;
-            }
-            if (section == "pi") {
-                level = 4;
-            }
-            if (section == "c1") {
-                level = 5;
-            }
-            if (section == "c2") {
-                level = 6;
-            }
-            if (section == "c3") {
-                level = 7;
-            }
-            if (section == "c4") {
-                level = 8;
-            }
-            if (section == "center") {
-                level = 9;
-            }
-            return level;
-        }
-
-        function getDescription(filename) {
-            var description = filename.substring('sri_yantra'.length+1);
-            description = description.substring(description.indexOf("_")+1);
-            description = description.substring(0, description.length-4);
-            description = description.replace(/_/g, ' ');
-            description = toTitleCase(description);
-            description = description.replace(/ Of /g, ' of ');
-            description = description.replace(/ The /g, ' the ');
-            description = description.replace(/ To /g, ' to ');
-            description = description.replace(/ For /g, ' for ');
-            description = description.replace(/ And /g, ' and ');
-            return description;
-        }
-
-    </script>
-
+<script src="js/nanobar.js"></script>
+<script src="js/scripts.js?v=1.0"></script>
 </body>
 </html>
