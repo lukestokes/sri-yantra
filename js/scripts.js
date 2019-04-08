@@ -16,6 +16,10 @@ var nanobar = new Nanobar();
 $( document ).ready(function() {
     resetConfig();
 
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        alert("The Sri Yantra Tool is currently only available for desktop computers.");
+    }
+
     $("#my-map area").mouseover(function(){
         filename = getFileName(this.href);
         changeImage(filename);
