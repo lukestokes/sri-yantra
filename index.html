@@ -17,13 +17,13 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#" id="explore_sri_yantra">Explore the Sri Yantra</a>
+            <a class="nav-link" href="#" id="explore_sri_yantra">1) Explore the Sri Yantra</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="learn_sri_yantra">Learn the Sri Yantra</a>
+            <a class="nav-link" href="#" id="learn_sri_yantra">2) Learn the Sri Yantra</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="begin_meditation">Begin Meditation</a>
+            <a class="nav-link" href="#" id="begin_meditation">3) Begin Meditation</a>
           </li>
         </ul>
       </div>
@@ -33,7 +33,7 @@
             <p>Welcome to the Sri Yantra educational and meditation tool.</p>
             <p>Use this tool to learn about the different attributes of the Sri Yantra and as a mechanism for focusing on it. The Sri Yantra represents the union of Masculine and Feminine Divine while including all aspects of human experience.</p>
             <p>To go into greater detail about the Sri Yantra, see <a href="https://www.youtube.com/watch?v=gTcWL00NUrs">this video</a> or visit some of the pages used to gather information for this tool <a href="https://www.gaia.com/article/what-is-the-power-of-shri-yantra">here</a>, <a href="http://mythologian.net/sri-yantra-sri-chakra-symbol-shree-yantra-meaning/">here</a>, <a href="http://karatmaster.com/levels-sri-yantra/">here</a>, <a href="https://creationcenter.org/unlocking-the-sri-yantra-through-the-secrets-of-sacred-geometry/">here</a>, and <a href="https://www.phidle.com/blogs/sacred-geometry/discover-the-power-and-beauty-of-the-sri-yantra">here</a>.</p>
-            <p>For best results, enter full screen mode from the view menu and adjust your zoom as needed so the Sri Yantra fits well on your screen.</p>
+            <p>For best results, enter full screen mode from the view menu.</p>
             <p>Use the menu items above to get started.</p>
             <p>First, explore the Sri Yantra to learn about the various attributes.</p>
             <p>Next, starting from the outside and working inwards, learn the Sri Yantra by clicking on the correct attribute.</p>
@@ -44,85 +44,45 @@
 
 <div id="message_wrapper" class="container">
     <p>Your meditation is about to begin.</p>
-    <p>We recommend entering full screen mode from the view menu and adjusting the zoom as needed.</p>
+    <p>We recommend entering full screen mode from the view menu.</p>
     <p>
     Traditionally, you'll want to face east with the screen about one or two feet away.<br />
     Be sure you are seated comfortably on a chair or pillow.<br />
     Breathe in through the nose filling your belly first and out through the mouth.<br />
     Focus on the center of the Sri Yantra.<br />
-    Slowly, relax your gaze to look a the triangles.<br />
+    Slowly, relax your gaze to look at the triangles.<br />
     Stare quietly, focusing on the silence between breaths.<br />
     Notice any emotions or thoughts that appear. Don't pass judgment, simply observe and refocus.<br />
     After five minutes, the image will disappear. Stare at the ghost image until it also dissappeasrs.<br />
     <br />
-    <a href="#" onclick="startMeditation(1); return false;">Start 1 Minute Meditation</a>.<br />
-    <a href="#" onclick="startMeditation(3); return false;">Start 3 Minute Meditation</a>.<br />
-    <a href="#" onclick="startMeditation(5); return false;">Start 5 Minute Meditation</a>.<br />
-    <a href="#" onclick="startMeditation(10); return false;">Start 10 Minute Meditation</a>.<br />
-    <a href="#" onclick="startMeditation(20); return false;">Start 20 Minute Meditation</a>.<br />
+    <b>Start Meditation:</b>
+    <button type="button" onclick="startMeditation(1); return false;" class="btn btn-info">1 Minute</button>
+    <button type="button" onclick="startMeditation(3); return false;" class="btn btn-info">3 Minutes</button>
+    <button type="button" onclick="startMeditation(5); return false;" class="btn btn-info">5 Minutes</button>
+    <button type="button" onclick="startMeditation(10); return false;" class="btn btn-info">10 Minutes</button>
+    <button type="button" onclick="startMeditation(20); return false;" class="btn btn-info">20 Minutes</button>
     </p>
-</div>
+    <button type="button" onclick="resetEverything(); return false;" class="btn btn-warning">Cancel</button>
 
+</div>
 <div id="main_wrapper">
-    <a href="#" id="return_menu" class="nav-link">Return</a>
     <div id="display_container">
+        <button type="button" id="return_menu" class="btn btn-primary">Return</button>
         <div id="level"></div>
         <div id="description"></div>
         <div id="log"></div>
     </div>
-    <table id="wrapper">
-      <tr>
-        <td>
-            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <div id="wrapper">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   viewBox="-2.5 -2.5 5 5"
-   width="8in"
-   height="8in"
+   viewBox="-2.5 -2.4 5 5"
    version="1.1"
    id="svg5638"
-   sodipodi:docname="SriYantra_Enhanced_.svg"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
-  <metadata
-     id="metadata5642">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Sri Yantra</dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1649"
-     inkscape:window-height="966"
-     id="namedview5640"
-     showgrid="false"
-     inkscape:zoom="1.03125"
-     inkscape:cx="397.59535"
-     inkscape:cy="376.81592"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg5638"
-     inkscape:snap-text-baseline="true" />
+    >
   <title
      id="title5486">Sri Yantra</title>
   <desc
@@ -1080,7 +1040,7 @@
        d="m 0.58972029,-1.9569 5.5801e-4,0.067612 -0.2072779,-7.121e-4 V -2.16 H -0.383 v 0.2700001 l -0.21378245,-3.39e-5 5.869e-4,-0.067037 0.1461951,6.66e-5 V -2.228004 h 0.90000046 v 0.2700002 z"
        style="fill:#000000;fill-opacity:1;stroke:none" />
   </g>
-<g
+  <g
      id="level_0_power_to_overcome_worldly_desire"
      class="paths">
     <path
@@ -1106,7 +1066,7 @@
        id="a_level_0_power_to_overcome_miserliness_and_avarice"
        />
     <path
-       style="fill:#FFFFFF;fill-opacity:1;stroke:none""
+       style="fill:#FFFFFF;fill-opacity:1;stroke:none"
        d="m -0.59593653,-2.0245194 -2.5902e-4,0.067449 0.14619691,6.63e-5 v -0.2700002 h 0.90000046 v 0.2689953 l 0.13971847,0.00111 -0.001481,-0.06757 -0.0702372,-5.401e-4 -2.6e-7,-0.2699975 h -1.03600054 l -3.2e-7,0.2699975 z"
        id="b_level_0_power_to_overcome_miserliness_and_avarice"
         />
@@ -1115,11 +1075,9 @@
        d="m 0.58972029,-1.9569 5.5801e-4,0.067612 -0.2072779,-7.121e-4 V -2.16 H -0.383 v 0.2700001 l -0.21378245,-3.39e-5 5.869e-4,-0.067037 0.1461951,6.66e-5 V -2.228004 h 0.90000046 v 0.2700002 z"
        id="c_level_0_power_to_overcome_miserliness_and_avarice"
        />
-  </g>
-  </svg>
-        </td>
-      </tr>
-    </table>
+ </g>
+ </svg>
+    </div>
 </div>
 <script
   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

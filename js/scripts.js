@@ -84,13 +84,13 @@ $( document ).ready(function() {
     $("#explore_sri_yantra").click(function(){
         config.learning = 0;
         hideMenu();
-        showSriYantra("right");
+        showSriYantra("left");
         return false;
     });
     $("#learn_sri_yantra").click(function(){
         config.learning = 1;
         hideMenu();
-        showSriYantra("right");
+        showSriYantra("left");
         getRandomEntries();
         updateDescription(config.entries[0].description,config.level);
         updateLevel();
@@ -235,6 +235,8 @@ function hideMenu() {
 }
 
 function resetEverything() {
+    $("#message_wrapper").hide();
+    $("#wrapper").css("margin","0");
     if (config.progress_bar_timer) {
         nanobar.go( 100 );
         clearTimeout(config.progress_bar_timer);
@@ -245,6 +247,7 @@ function resetEverything() {
             resetColor(config.database[i][j].id);
         }
     }
+    $("#wrapper").show();
     $("#log").html('');
     $("#level").html('');
     $("#description").html('');
@@ -259,7 +262,12 @@ function hideSriYantra() {
     $("#main_wrapper").hide();
 }
 function showSriYantra(alignment) {
-    $("#wrapper tr td").css("text-align",alignment);
+    if (alignment == "center") {
+        $("#wrapper").css("margin","auto");
+    }
+    if (alignment == "left") {
+        $("#wrapper").css("margin","0");
+    }
     $("#main_wrapper").show();
 }
 
@@ -302,6 +310,7 @@ function beginMeditation() {
 }
 
 function startMeditation(minutes) {
+    $("#return_menu").hide();
     config.meditation_time_seconds = minutes * 60;
     $("#message_wrapper").hide();
     showSriYantra("center");
@@ -312,7 +321,7 @@ function startMeditation(minutes) {
             clearTimeout(config.progress_bar_timer);
             config.meditation_progress = 0;
             nanobar.go( 100 );
-            $("#wrapper").hide();
+            hideSriYantra();
             updateEmptySpaceProgressBar();
             setTimeout(
                 function() {
@@ -320,7 +329,8 @@ function startMeditation(minutes) {
                     config.meditation_progress = 0;
                     nanobar.go( 100 );
                     config.meditating = 0;
-                    $("#wrapper").show();
+                    showSriYantra("left");
+                    $("#return_menu").show();
                 },
                 1000*config.empty_space_time_seconds
             );
